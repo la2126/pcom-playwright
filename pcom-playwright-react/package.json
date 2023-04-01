@@ -65,6 +65,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/dom": "^9.2.0",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "plop": "^3.1.2",
     "prop-types": "^15.8.1",
     "webpack": "^5.77.0"
   }
