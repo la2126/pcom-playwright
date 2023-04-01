@@ -6,7 +6,7 @@ module.exports = function (plop) {
             type: 'list',
             name: 'type',
             message: 'Component Type',
-            choices: ["atom", "component", "page", "material", "kontent"]
+            choices: ["atom", "component", "page", "material"]
         },
         {
             type: 'input',
@@ -15,17 +15,17 @@ module.exports = function (plop) {
         }],
         actions: [{
             type: 'add',
-            path: 'stories/{{type}}s/{{name}}/{{name}}.tsx',
+            path: 'src/stories/{{type}}s/{{name}}/{{name}}.tsx',
             templateFile: 'plop-templates/Component.tsx.hbs'
         },
         {
             type: 'add',
-            path: 'stories/{{type}}s/{{name}}/{{name}}.stories.tsx',
+            path: 'src/stories/{{type}}s/{{name}}/{{name}}.stories.tsx',
             templateFile: 'plop-templates/Component.stories.tsx.hbs'
         },
         {
             type: 'add',
-            path: 'stories/{{type}}s/{{name}}/{{name}}.scss',
+            path: 'src/stories/{{type}}s/{{name}}/{{name}}.scss',
             templateFile: 'plop-templates/Component.scss.hbs'
         }]
     });
