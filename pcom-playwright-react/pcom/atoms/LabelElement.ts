@@ -1,18 +1,13 @@
 import { Locator } from "@playwright/test";
 import { HtmlElement } from "./HtmlElement";
 
-export class ButtonElement extends HtmlElement {
+export class Label extends HtmlElement {
     constructor(element: Locator) {
         super();
         this._element = element;
     }
 
-    async click(): Promise<void> {
-        return this._element.click();
-    }
-    async getText(): Promise<string> {
+    async getText(text: string): Promise<string> {
         return this._element.textContent();
     }
 }
-
-

@@ -1,10 +1,10 @@
-import { Locator, MakeMatchers } from "@playwright/test";
-import { test, expect as exp } from "@playwright/test";
+import { Locator } from "@playwright/test";
+import { expect as exp } from "@playwright/test";
 
 export class HtmlElement {
     protected _element: Locator;
 
-    expect(message?: string): MakeMatchers<void, Locator> {
+    expect(message?: string) {
         return exp(this._element, { message: message });
     }
 

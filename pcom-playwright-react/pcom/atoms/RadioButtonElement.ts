@@ -1,7 +1,7 @@
 import { Locator } from "@playwright/test";
 import { HtmlElement } from "./HtmlElement";
 
-export class ButtonElement extends HtmlElement {
+export class RadioButtonElement extends HtmlElement {
     constructor(element: Locator) {
         super();
         this._element = element;

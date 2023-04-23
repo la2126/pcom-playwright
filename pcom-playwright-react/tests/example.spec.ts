@@ -1,10 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test.only('has title buttons', async ({ page }) => {
+  await page.goto('https://commitquality.com/');
+  await page.getByTestId('navbar-practice').click();
+  await page.getByTestId('practice-general').click();
+
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page.getByText('Buttons', { exact: true })).toBeVisible();
 });
 
 test('get started link', async ({ page }) => {
