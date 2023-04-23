@@ -1,5 +1,6 @@
 import { Page } from "@playwright/test";
 import { UiAScreenSaverElement, UiAColumnsElement, UiAQuestionFlowResetElement } from "../";
+import { Settings } from "../../../Settings";
 
 export class WelcomePage {
     page: Page;
@@ -15,7 +16,7 @@ export class WelcomePage {
     }
 
     async goToPage() {
-        await this.page.goto('https://abg-kiosk-develop.vercel.app/st1234/welcome');
+        await this.page.goto(Settings.domain);
     }
 
 }
