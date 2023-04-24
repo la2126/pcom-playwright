@@ -23,4 +23,4 @@ export  class StoreLoginSecondScreenElement extends HtmlElement {
         this.backButton = new ButtonElement(element.getByTestId('Button-Back'));
         this.confirmButton = new ButtonElement(element.getByTestId('Button-Confirm'));
     }
-}
+}   

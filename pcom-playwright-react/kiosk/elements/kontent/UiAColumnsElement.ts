@@ -1,6 +1,6 @@
 import { Locator } from "@playwright/test";
 import { HtmlElement } from "../../../pcom/atoms";
-import { UiSStoreRoomsElement, UiAProductModalElement, UiAWelcomeFooterElement, UiAMiniCartElement } from "../";
+import { UiSStoreRoomsElement, UiAProductModalElement, UiAWelcomeFooterElement, UiAMiniCartElement } from "..";
 
 export  class UiAColumnsElement extends HtmlElement {
     uiSStoreRoomsElement: UiSStoreRoomsElement;
