@@ -1,22 +1,22 @@
 import { Page } from "@playwright/test";
-import { UiAScreenSaverElement, UiAColumnsElement, UiAQuestionFlowResetElement } from "../";
+import { UiAScreensaverElement, UiAColumnsElement, UiAQuestionFlowResetElement } from "../";
 import { Settings } from "../../../Settings";
 
 export class WelcomePage {
     page: Page;
-    uiAScreenSaverElement: UiAScreenSaverElement;
+    uiAScreensaverElement: UiAScreensaverElement;
     uiAColumnsElement: UiAColumnsElement;
     uiAQuestionFlowResetElement: UiAQuestionFlowResetElement;
 
     constructor(page: Page) {
         this.page = page;
-        this.uiAScreenSaverElement = new UiAScreenSaverElement(page.locator('.UiAScreenSaver'));
+        this.uiAScreensaverElement = new UiAScreensaverElement(page.locator('.UiAScreensaver'));
         this.uiAColumnsElement = new UiAColumnsElement(page.locator('.UiAColumns'));
         this.uiAQuestionFlowResetElement = new UiAQuestionFlowResetElement(page.locator('.UiAQuestionFlowReset'));
     }
 
     async goToPage() {
-        await this.page.goto(Settings.domain);
+        await this.page.goto(`${Settings.domain}st1234/welcome`);
     }
 
 }

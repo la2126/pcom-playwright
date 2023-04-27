@@ -50,6 +50,18 @@ test.describe('Store login navigation', async () => {
 
     test('Clicking Confirm button takes user to Kiosk site for store', async ({ page, storeLoginPage }) => {
         await storeLoginPage.uiAStoreLoginElement.secondScreen.confirmButton.click();
-        await expect(page).toHaveURL(`${Settings.domain}/st1234/welcome`);
+        await expect(page).toHaveURL(`${Settings.domain}st1234/welcome`);
     });
+});
+
+test.describe('Store already logged in', async () => {
+    test('Base URL redirects to store page when local settings set', async ({ page, storeLoginPage}) => {
+        await storeLoginPage.uiAStoreLoginElement.firstScreen.searchForStore('1234');
+        await storeLoginPage.uiAStoreLoginElement.secondScreen.storeFoundText.waitFor('visible');
+        await storeLoginPage.uiAStoreLoginElement.secondScreen.confirmButton.click();
+        await storeLoginPage.goToPage();
+        await page.waitForURL(`${Settings.domain}st1234/welcome`, {timeout: 2000});
+        await expect(page).toHaveURL(`${Settings.domain}st1234/welcome`);
+    });
+
 });

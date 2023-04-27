@@ -1,14 +1,14 @@
 import { Locator } from "@playwright/test";
-import { HeadingElement, HtmlElement } from "../../../pcom/atoms";
+import { ButtonElement, HtmlElement } from "../../../pcom/atoms";
 
-export  class UiAScreenSaverElement extends HtmlElement {
+export  class UiAScreensaverElement extends HtmlElement {
 
-    heading: HeadingElement;
+    startButton: ButtonElement;
 
 
     constructor(element: Locator) {
         super();
         this._element = element;
-        this.heading = new HeadingElement(element.locator('h1'));
+        this.startButton = new ButtonElement(element.getByText('Start'));
     }
 }

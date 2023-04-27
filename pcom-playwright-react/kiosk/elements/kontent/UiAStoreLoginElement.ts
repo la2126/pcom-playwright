@@ -1,6 +1,5 @@
 import { Locator } from "@playwright/test";
-import { THEMING_EVENTS } from "@storybook/addon-styling/dist/ts/constants";
-import { InputTextElement, ButtonElement, TextElement, HtmlElement } from "../../../pcom/atoms";
+import { HtmlElement } from "../../../pcom/atoms";
 import { StoreLoginFirstScreenElement, StoreLoginSecondScreenElement } from "../components";
 
 export  class UiAStoreLoginElement extends HtmlElement {
