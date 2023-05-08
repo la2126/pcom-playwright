@@ -1,7 +1,7 @@
 import { Locator } from "@playwright/test";
-import { ButtonElement, HtmlElement } from "../../../pcom/atoms";
+import { HtmlElement } from "../../../pcom/atoms";
 import { ElementCollection } from "../../../pcom/ElementCollection";
-import { TileElement } from "./TileElement";
+import { TileElement } from "./";
 
 export  class TilesGridElement extends HtmlElement {
 
@@ -12,7 +12,7 @@ export  class TilesGridElement extends HtmlElement {
     constructor(element: Locator) {
         super();
         this._element = element;
-        this.tileElement = new ElementCollection<TileElement>(element.locator('[data-testid^="tile-container-"'), TileElement);
+        this.tileElement = new ElementCollection<TileElement>(element.locator('[data-testid^="tile-container-"]'), TileElement);
     }
 }
 

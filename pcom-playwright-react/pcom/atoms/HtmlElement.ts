@@ -13,4 +13,5 @@ export class HtmlElement {
     ): Promise<void> {
         return this._element.waitFor({ state: state });
     }
+
 }

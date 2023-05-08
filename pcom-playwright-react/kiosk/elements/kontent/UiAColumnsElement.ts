@@ -1,12 +1,13 @@
 import { Locator } from "@playwright/test";
 import { HtmlElement } from "../../../pcom/atoms";
-import { UiSStoreRoomsElement, UiAProductModalElement, UiAWelcomeFooterElement, UiAMiniCartElement } from "..";
+import { UiSStoreRoomsElement, UiAProductModalElement, UiAWelcomeFooterElement, UiAMiniCartElement, UiAProductSearchElement } from "..";
 
 export  class UiAColumnsElement extends HtmlElement {
     uiSStoreRoomsElement: UiSStoreRoomsElement;
     uiAProductModalElement: UiAProductModalElement;
     uiAWelcomeFooterElement: UiAWelcomeFooterElement;
     uiAMiniCartElement: UiAMiniCartElement;
+    uiAProductSearchElement: UiAProductSearchElement;
 
 
     constructor(element: Locator) {
@@ -16,5 +17,6 @@ export  class UiAColumnsElement extends HtmlElement {
         this.uiAProductModalElement = new UiAProductModalElement(element.locator('.UiAProductModal'));
         this.uiAWelcomeFooterElement = new UiAWelcomeFooterElement(element.locator('.UiAWelcomeFooter'));
         this.uiAMiniCartElement = new UiAMiniCartElement(element.locator('.UiAMiniCart'));
+        this.uiAProductSearchElement = new UiAProductSearchElement(element.locator('.UiAProductSearch'));
     }
 }

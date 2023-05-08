@@ -1,6 +1,6 @@
 import { Locator } from "@playwright/test";
-import { InputTextElement, ButtonElement, TextElement, HtmlElement } from "../../../pcom/atoms";
-import { TilesGridElement } from "../components/tilesGridElement";
+import { HtmlElement } from "../../../pcom/atoms";
+import { TilesGridElement } from "../components";
 
 export  class UiSStoreRoomsElement extends HtmlElement {
 

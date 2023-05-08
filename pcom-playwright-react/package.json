@@ -27,9 +27,9 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "plop": "plop",
-    "tests": "npx playwright test --project=kiosk", 
+    "tests": "npx playwright test --project=kiosk",
     "tests-debug": "npx playwright test --project=kiosk --debug",
-    "tests-headed": "npx playwright test --project=kiosk --headed" 
+    "tests-headed": "npx playwright test --project=kiosk --headed"
   },
   "eslintConfig": {
     "extends": [
@@ -60,7 +60,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.32.1",
+    "@playwright/test": "^1.33.0",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
